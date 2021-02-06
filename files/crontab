@@ -1,0 +1,2 @@
+*/5 * * * * python3 /upload/wakeup.py
+*/5 * * * * python3 /upload/check.py
