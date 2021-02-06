@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rsyslogd
-cron
+
+cron -f
 
 # 检查config配置文件，并创建
 if [ ! -e "/config/qBittorrent/config/qBittorrent.conf" ] ;  then 
