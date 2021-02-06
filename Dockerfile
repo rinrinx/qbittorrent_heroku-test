@@ -18,6 +18,8 @@ RUN pip3 install qbittorrent-api
 RUN sudo chmod 777 /qbittorrent-nox
 RUN mv /qbittorrent-nox /usr/bin/
 
+RUN apt-get -y install cron
+
 # Copy hello-cron file to the cron.d directory
 COPY hello-cron /etc/cron.d/hello-cron
 
