@@ -3,8 +3,7 @@ FROM ubuntu
 
 COPY root /
 
-chmod 777 /qbittorrent-nox
-mv /qbittorrent-nox /usr/bin/
+
 
 RUN apt-get update
 RUN apt-get install sudo
@@ -19,6 +18,9 @@ RUN python3 get-pip.py
 RUN pip3 install pyTelegramBotAPI
 RUN pip3 install qbittorrent-api
 
+
+RUN sudo chmod 777 /qbittorrent-nox
+RUN mv /qbittorrent-nox /usr/bin/
 
 RUN apt-get -y install rsyslog
 ADD files/crontab /app/crontab
