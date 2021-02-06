@@ -2,8 +2,6 @@
 
 rsyslogd
 cron
-touch /var/log/cron.log
-tail -F /var/log/syslog /var/log/cron.log
 
 # 检查config配置文件，并创建
 if [ ! -e "/config/qBittorrent/config/qBittorrent.conf" ] ;  then 
