@@ -23,8 +23,6 @@ RUN pip3 install qbittorrent-api
 RUN apt-get -y install rsyslog
 ADD files/crontab /app/crontab
 RUN crontab /app/crontab
-ADD files/bin/start-cron.sh /usr/bin/start-cron.sh
-RUN chmod +x /usr/bin/start-cron.sh
 RUN touch /var/log/cron.log
 
 RUN sudo chmod 777 /start.sh
