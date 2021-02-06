@@ -2,15 +2,10 @@ FROM ubuntu
 
 
 COPY root /
-
-
-
 RUN apt-get update
 RUN apt-get install sudo
 RUN sudo apt-get update
-RUN apt-get install yum -y
 RUN apt-get install wget -y
-
 
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN sudo apt-get install python3-distutils -y
