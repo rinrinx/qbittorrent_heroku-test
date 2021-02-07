@@ -1,8 +1,6 @@
 #!/bin/bash
 
 
-cron -f
-
 # 检查config配置文件，并创建
 if [ ! -e "/config/qBittorrent/config/qBittorrent.conf" ] ;  then 
 mkdir -p /config/qBittorrent/config/
@@ -16,4 +14,5 @@ chown -R /config \
 
 chmod 0777 /upload/ -R
 python3 /upload/config.py
-yes "" | qbittorrent-nox --webui-port=$PORT  --profile=/config
+nohup yes "" | qbittorrent-nox --webui-port=$PORT  --profile=/config  &
+python3 /upload/dingshi.py
