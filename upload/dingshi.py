@@ -10,10 +10,8 @@ os.chdir(os.path.dirname(__file__))
 
 
 
-
-
 def new_clock():
-    print("检查种子情况:%s"%datetime.now())
+    print("检查种子情况:%s"%datetime.datetime.now())
     sys.stdout.flush()
     zhu()
 
