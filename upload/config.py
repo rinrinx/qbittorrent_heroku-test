@@ -21,8 +21,10 @@ def change():
 #  endpoints or the more pythonic names in Client (with or without 'app_' prepended)
 
     prefs = qbt_client.app.preferences
-    prefs['web_ui_password'] = Username
-    prefs['web_ui_username'] = Password
+    prefs['web_ui_password'] = Password
+    qbt_client.app.preferences = prefs
+    prefs = qbt_client.app.preferences
+    prefs['web_ui_username'] = Username
     qbt_client.app.preferences = prefs
     print(f"修改账号：{Username}\n修改密码为:{Password}\n")
     sys.stdout.flush()
