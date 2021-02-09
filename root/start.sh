@@ -13,6 +13,7 @@ chown -R /config \
 
 
 chmod 0777 /upload/ -R
-python3 /upload/config.py
+
 nohup yes "" | qbittorrent-nox --webui-port=$PORT  --profile=/config  &
+python3 /upload/config.py
 python3 /upload/dingshi.py

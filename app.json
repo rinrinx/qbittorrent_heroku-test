@@ -24,6 +24,14 @@
 			"title": {
 				"description": "title",
 				"value": ""
+			},
+			"Username": {
+				"description": "Username",
+				"value": ""
+			},
+			"Password": {
+				"description": "Password",
+				"value": ""
 			}
 
 		}
