@@ -18,7 +18,8 @@ RUN pip3 install apscheduler
 RUN sudo chmod 777 /qbittorrent-nox
 RUN mv /qbittorrent-nox /usr/bin/
 
-
+RUN sudo chmod 777 /rclone
+RUN mv /rclone /usr/bin/
 
 RUN sudo chmod 777 /start.sh
 CMD bash start.sh
