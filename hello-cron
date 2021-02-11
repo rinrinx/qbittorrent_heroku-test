@@ -1,6 +1,0 @@
-# PATH非常重要，因为cron bash和系统环境变量不一致
-PATH="/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
- * * * * * echo "定时任务"
-*/5 * * * * python3 /upload/wakeup.py
-*/5 * * * * python3 /upload/check.py
-# An empty line is required at the end of this file for a valid cron file.
