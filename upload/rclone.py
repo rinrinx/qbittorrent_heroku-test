@@ -57,8 +57,8 @@ def start_upload(dir,folder,Remote,Upload):
     print(folder)
     if folder!="":
         print("上传判断，文件夹")
-        
-        command=f"rclone --config /config/rclone/rclone.conf copy  \"{dir}\"  \"{Remote}:{Upload}/{folder}\"  --stats=5s --stats-one-line --stats-log-level NOTICE "
+        os.system(f"ls {dir}")
+        command=f"rclone --config /config/rclone/rclone.conf copy  \"{dir}/\"  \"{Remote}:{Upload}/{folder}\"  --stats=5s --stats-one-line --stats-log-level NOTICE "
         print(command)
         sys.stdout.flush()
         resultsCommond = Popen(command,stdout=PIPE,
@@ -68,7 +68,8 @@ def start_upload(dir,folder,Remote,Upload):
         sys.stdout.flush()
         return f"{Remote}:{Upload}/{folder}"
     else:
-        command=f"rclone --config /config/rclone/rclone.conf copy  \"{dir}\"  \"{Remote}:{Upload}\"  --stats=5s --stats-one-line --stats-log-level NOTICE "
+        os.system(f"ls {dir}")
+        command=f"rclone --config /config/rclone/rclone.conf copy  \"{dir}/\"  \"{Remote}:{Upload}\"  --stats=5s --stats-one-line --stats-log-level NOTICE "
         print(command)
         sys.stdout.flush()
         resultsCommond = Popen(command,stdout=PIPE,
