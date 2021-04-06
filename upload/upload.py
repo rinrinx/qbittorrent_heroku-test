@@ -12,6 +12,7 @@ from qb import *
 import telebot
 import datetime
 import shutil
+from pathlib import Path
 os.chdir(os.path.dirname(__file__))
 print("开始上传")
 sys.stdout.flush()
@@ -208,7 +209,8 @@ if __name__ == '__main__':
                     fu_folder=str(to_dir).replace(str(os.path.splitext(Torrents_name)[0]),"")
                     print(fu_folder)
                     print(Torrents_content_dir,to_dir)
-                    while  my_file.is_dir(fu_folder):
+                    my_file = Path(fu_folder)
+                    while  my_file.is_dir():
                         time.sleep(10)
                         #防止错误删除
 
