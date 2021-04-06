@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 from subprocess import Popen, PIPE
 import os
+import sys
 
 import json
 os.chdir(os.path.dirname(__file__))
@@ -52,18 +53,25 @@ def start_upload(dir,folder,Remote,Upload):
     print(folder)
     if folder!="":
         print("上传判断，文件夹")
+        
         command=f"rclone --config /config/rclone/rclone.conf copy  \"{dir}\"  \"{Remote}:{Upload}/{folder}\"  --stats=5s --stats-one-line --stats-log-level NOTICE --log-file=\"rclone_upload.log\" "
         print(command)
+        sys.stdout.flush()
         resultsCommond = Popen(command,stdout=PIPE,
                                stderr=PIPE,stdin=PIPE,shell=True)
         data = resultsCommond.stdout.read()
+        print(data)
+        sys.stdout.flush()
         return f"{Remote}:{Upload}/{folder}"
     else:
         command=f"rclone --config /config/rclone/rclone.conf copy  \"{dir}\"  \"{Remote}:{Upload}\"  --stats=5s --stats-one-line --stats-log-level NOTICE --log-file=\"rclone_upload.log\" "
         print(command)
+        sys.stdout.flush()
         resultsCommond = Popen(command,stdout=PIPE,
                                stderr=PIPE,stdin=PIPE,shell=True)
         data = resultsCommond.stdout.read()
+        print(data)
+        sys.stdout.flush()
         return f"{Remote}:{Upload}"
 
 

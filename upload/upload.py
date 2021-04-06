@@ -212,6 +212,7 @@ if __name__ == '__main__':
                     my_file = Path(fu_folder)
                     while  my_file.is_dir():
                         time.sleep(10)
+                        print("等待上传")
                         #防止错误删除
 
                     creat_link(Torrents_content_dir,to_dir)
