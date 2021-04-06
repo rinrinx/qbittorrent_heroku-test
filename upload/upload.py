@@ -149,7 +149,7 @@ if __name__ == '__main__':
     for  Rule in Rule_list:
         category= Rule["category"]
         share_rate=Rule["share_rate"]
-        time=Rule["time"]
+        uptime=Rule["time"]
         tags=Rule["tags"]
         emby=Rule["emby"]
         delete=Rule["delete"]
@@ -158,7 +158,7 @@ if __name__ == '__main__':
         if Torrents_category==category :
             print(category ,share_rate,time,tags,emby)
             sys.stdout.flush()
-            if time=="0" and share_rate=="0" and emby=="false" :
+            if uptime=="0" and share_rate=="0" and emby=="false" :
                 print("直接调用rclone")
                 if int(Torrents_num)==1:
                     print(Torrents_content_dir)
@@ -194,7 +194,7 @@ if __name__ == '__main__':
 
 
                     break
-            elif time=="0" and share_rate=="0" and emby=="true":
+            elif uptime=="0" and share_rate=="0" and emby=="true":
                 print("emby后上传rclone")
                 if int(Torrents_num)==1:
                     print("emby,单文件")
