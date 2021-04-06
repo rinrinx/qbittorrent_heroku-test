@@ -8,7 +8,7 @@ cp /usr/local/qbittorrent/defaults/qBittorrent.conf  /config/qBittorrent/config/
 fi
 
 # permissions
-chown -R /config \
+chown 0777 -R /config \
     /downloads
 
 
