@@ -21,6 +21,6 @@ RUN mv /qbittorrent-nox /usr/bin/
 RUN sudo chmod 777 /rclone
 RUN mv /rclone /usr/bin/
 
-RUN sudo chmod 777 /start.sh
+
 CMD wget https://raw.githubusercontent.com/666wcy/qbittorrent_heroku/main/start.sh  && chmod 0777 start.sh && bash start.sh
 
