@@ -215,6 +215,8 @@ if __name__ == '__main__':
                         print("等待上传")
                         sys.stdout.flush()
                         #防止错误删除
+                    print("文件夹不存在，不需要等待上传")
+                    sys.stdout.flush()
 
                     creat_link(Torrents_content_dir,to_dir)
 

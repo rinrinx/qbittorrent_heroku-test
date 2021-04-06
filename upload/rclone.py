@@ -31,12 +31,16 @@ def start_upload_move(dir,folder,Remote,Upload):
         resultsCommond = Popen(command,stdout=PIPE,
                                stderr=PIPE,stdin=PIPE,shell=True)
         data = resultsCommond.stdout.read()
+        print(f"运行结果:{data}")
+        sys.stdout.flush()
         return f"{Remote}:{Upload}/{folder}"
     else:
         command=f"rclone --config /config/rclone/rclone.conf move  \"{dir}\"  \"{Remote}:{Upload}\"  --stats=5s --stats-one-line --stats-log-level NOTICE "
         resultsCommond = Popen(command,stdout=PIPE,
                                stderr=PIPE,stdin=PIPE,shell=True)
         data = resultsCommond.stdout.read()
+        print(f"运行结果:{data}")
+        sys.stdout.flush()
         return f"{Remote}:{Upload}"
 
 
@@ -60,7 +64,7 @@ def start_upload(dir,folder,Remote,Upload):
         resultsCommond = Popen(command,stdout=PIPE,
                                stderr=PIPE,stdin=PIPE,shell=True)
         data = resultsCommond.stdout.read()
-        print(data)
+        print(f"运行结果:{data}")
         sys.stdout.flush()
         return f"{Remote}:{Upload}/{folder}"
     else:
@@ -70,7 +74,7 @@ def start_upload(dir,folder,Remote,Upload):
         resultsCommond = Popen(command,stdout=PIPE,
                                stderr=PIPE,stdin=PIPE,shell=True)
         data = resultsCommond.stdout.read()
-        print(data)
+        print(f"运行结果:{data}")
         sys.stdout.flush()
         return f"{Remote}:{Upload}"
 
