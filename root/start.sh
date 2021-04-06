@@ -8,7 +8,9 @@ cp /usr/local/qbittorrent/defaults/qBittorrent.conf  /config/qBittorrent/config/
 fi
 
 # permissions
-chown -R /config \
+
+mkdir -p /downloads
+chmod 0777 -R /config \
     /downloads
 
 
