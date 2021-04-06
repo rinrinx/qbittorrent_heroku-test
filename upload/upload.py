@@ -4,6 +4,7 @@ import sys
 import os, sys, stat
 import sqlite3
 import json
+import time
 from rclone import *
 from link import *
 from mover import *
@@ -207,6 +208,9 @@ if __name__ == '__main__':
                     fu_folder=str(to_dir).replace(str(os.path.splitext(Torrents_name)[0]),"")
                     print(fu_folder)
                     print(Torrents_content_dir,to_dir)
+                    while  my_file.is_dir(fu_folder):
+                        time.sleep(10)
+                        #防止错误删除
 
                     creat_link(Torrents_content_dir,to_dir)
 
