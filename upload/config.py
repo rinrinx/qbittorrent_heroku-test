@@ -11,7 +11,8 @@ Rule=os.environ.get('Rule')
 Username=os.environ.get('Username')
 Password=os.environ.get('Password')
 Rule=Rule.split("\n")
-
+print(f"端口为{QB_port}")
+sys.stdout.flush()
 
 rclone=os.environ.get('rclone')
 
