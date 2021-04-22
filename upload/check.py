@@ -19,7 +19,7 @@ os.chdir(os.path.dirname(__file__))
 with open('/upload/config.json', 'r', encoding='utf-8') as f:
     conf = json.loads(f.read())
     f.close()
-QB_host=conf["QB_host"]
+QB_port=os.environ.get('PORT')
 QB_port=conf["QB_port"]
 QB_username=conf["QB_username"]
 QB_password=conf["QB_password"]
