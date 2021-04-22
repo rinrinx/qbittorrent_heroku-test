@@ -27,7 +27,8 @@ Telegram_bot_api=conf["Telegram_bot_api"]
 Telegram_user_id=conf["Telegram_user_id"]
 Rule_list=conf["Rule"]
 Download_dir=conf["Download_dir"]
-
+print(f"check端口为{QB_port}")
+sys.stdout.flush()
 
 qbt_client = qbittorrentapi.Client(host=QB_host, port=QB_port, username=QB_username, password=QB_password)
 try:
