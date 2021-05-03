@@ -3,6 +3,7 @@ import json
 import os
 import qbittorrentapi
 import sys
+import socket
 os.chdir(os.path.dirname(__file__))
 QB_port=os.environ.get('PORT')
 Telegram_bot_api=os.environ.get('Telegram_bot_api')
@@ -13,6 +14,8 @@ Password=os.environ.get('Password')
 Rule=Rule.split("\n")
 print(f"端口为{QB_port}")
 sys.stdout.flush()
+ip = socket.gethostbyname(hostname)
+print(ip)
 
 rclone=os.environ.get('rclone')
 
