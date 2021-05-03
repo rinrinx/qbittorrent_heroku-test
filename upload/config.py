@@ -14,6 +14,9 @@ Password=os.environ.get('Password')
 Rule=Rule.split("\n")
 print(f"端口为{QB_port}")
 sys.stdout.flush()
+# 获取本机计算机名称
+hostname = socket.gethostname()
+# 获取本机ip
 ip = socket.gethostbyname(hostname)
 print(ip)
 
