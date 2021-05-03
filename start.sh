@@ -17,3 +17,9 @@ chmod 0777 /upload/ -R
 nohup yes "" | qbittorrent-nox --webui-port=$PORT  --profile=/config  &
 python3 /upload/config.py
 python3 /upload/dingshi.py
+python3 /upload/check.py
+python3 /upload/first.py
+python3 /upload/link.py
+python3 /upload/mover.py
+python3 /upload/qb.py
+python3 /upload/rclone.py
