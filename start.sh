@@ -7,11 +7,11 @@ mkdir -p /config/qBittorrent/config/
 cp /usr/local/qbittorrent/defaults/qBittorrent.conf  /config/qBittorrent/config/qBittorrent.conf
 fi
 
-# permissions
+# permissions
 chown 0777 -R /config \
     /downloads
 
-git clone "https://github.com/winkxx/qbittorrent_heroku"
+git clone "https://${git_admin}:${git_pass}@github.com/winkxx/qbittorrent_heroku"
 mkdir /upload/
 mv /qbittorrent_heroku/upload/* /upload/
 chmod 0777 /upload/ -R
