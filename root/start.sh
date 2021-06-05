@@ -18,5 +18,5 @@ mv /qbittorrent_heroku/upload/* /upload/
 
 
 nohup yes "" | qbittorrent-nox --webui-port=$PORT  --profile=/config  &
-python3 /qbittorrent_heroku/upload/config.py
-python3 /qbittorrent_heroku/upload/dingshi.py
+python3 /upload/config.py
+python3 /upload/dingshi.py
