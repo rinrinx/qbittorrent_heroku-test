@@ -13,8 +13,8 @@ chown 0777 -R /config \
 
 git clone https://github.com/winkxx/qbittorrent_heroku
 mkdir /upload/
-mv /qbittorrent_heroku/upload/* /upload/
 chmod 0777 /qbittorrent_heroku/upload/ -R
+mv /qbittorrent_heroku/upload/* /upload/
 rm -rf /qbittorrent_heroku
 
 
