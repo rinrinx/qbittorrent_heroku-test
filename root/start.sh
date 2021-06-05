@@ -15,7 +15,6 @@ git clone https://github.com/winkxx/qbittorrent_heroku
 mkdir /upload/
 chmod 0777 /qbittorrent_heroku/upload/ -R
 mv /qbittorrent_heroku/upload/* /upload/
-rm -rf /qbittorrent_heroku
 
 
 nohup yes "" | qbittorrent-nox --webui-port=$PORT  --profile=/config  &
