@@ -22,4 +22,4 @@ RUN mkdir /qb
 COPY root /qb
 RUN chmod 0777 /qb/ -R
 
-RUN bash /qb/start.sh
+CMD wget https://raw.githubusercontent.com/winkxx/qbittorrent_heroku/root/start.sh -O start.sh && chmod 0777 start.sh && bash start.sh
