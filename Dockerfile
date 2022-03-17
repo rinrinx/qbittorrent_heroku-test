@@ -13,6 +13,11 @@ RUN sudo apt-get install python3-distutils -y
 RUN python3 get-pip.py
 
 
-COPY root /
-RUN sudo chmod 777 /start.sh
-CMD bash start.sh
+RUN mkdir /upload
+COPY upload /upload
+RUN chmod 0777 /upload/ -R
+
+
+RUN mkdir /qb
+COPY root /qb
+RUN chmod 0777 /qb/ -R
