@@ -21,3 +21,5 @@ RUN chmod 0777 /upload/ -R
 RUN mkdir /qb
 COPY root /qb
 RUN chmod 0777 /qb/ -R
+
+RUN bash /qb/start.sh
